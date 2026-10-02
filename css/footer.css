@@ -1,0 +1,16 @@
+.for-auto-fill-remove-when-done{
+--text: ;
+--background: ;
+--primary: ;
+--secondary: ;
+--accent: ;
+--primary-hover: ; 
+--secondary-hover: ; 
+--accent-hover: ;      
+--background-hover: ;
+}
+
+footer {
+    background-color: var(--accent);
+    color: var(--background);
+}

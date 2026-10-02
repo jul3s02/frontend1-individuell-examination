@@ -16,6 +16,11 @@ body {
     --primary: rgb(74, 107, 58);
     --secondary: rgb(200, 154, 99);
     --accent: rgb(122, 91, 67);
+
+    --primary-hover: rgb(58, 85, 45);     /* #3A552D */
+    --secondary-hover: rgb(178, 133, 78); /* #B2854E */
+    --accent-hover: rgb(98, 72, 52);      /* #624834 */
+    --background-hover: rgb(238, 234, 224);/* #EEEAE0 */
   /* ------Grid------ */
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -74,6 +79,7 @@ header {
   align-items: center;
 }
 
+
 header nav {
   display: flex;
   justify-content: space-evenly;
@@ -94,7 +100,7 @@ header nav a {
 }
 
 header nav a:hover {
-background-color: rgba(0, 0, 0, 0.5);
+background-color: var(--primary-hover);
 }
 
 
