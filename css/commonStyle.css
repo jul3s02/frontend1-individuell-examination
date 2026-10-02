@@ -17,6 +17,8 @@ body {
     --secondary: rgb(172, 191, 160) /*rgb(200, 154, 99)*/;
     --accent: rgb(122, 91, 67);
 
+    --accent-opacity: rgba(122, 91, 67, 0.8); 
+    
     --primary-hover: rgb(58, 85, 45);     
     --secondary-hover: rgb(151, 168, 141) /*rgb(178, 133, 78)*/; 
     --accent-hover: rgb(98, 72, 52);      
