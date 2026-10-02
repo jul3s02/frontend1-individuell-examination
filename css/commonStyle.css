@@ -14,13 +14,13 @@ body {
     --text: rgb(42, 45, 42);
     --background: rgb(248, 246, 240);
     --primary: rgb(74, 107, 58);
-    --secondary: rgb(200, 154, 99);
+    --secondary: rgb(172, 191, 160) /*rgb(200, 154, 99)*/;
     --accent: rgb(122, 91, 67);
 
-    --primary-hover: rgb(58, 85, 45);     /* #3A552D */
-    --secondary-hover: rgb(178, 133, 78); /* #B2854E */
-    --accent-hover: rgb(98, 72, 52);      /* #624834 */
-    --background-hover: rgb(238, 234, 224);/* #EEEAE0 */
+    --primary-hover: rgb(58, 85, 45);     
+    --secondary-hove: rgb(151, 168, 141) /*rgb(178, 133, 78)*/; 
+    --accent-hover: rgb(98, 72, 52);      
+    --background-hover: rgb(238, 234, 224);
   /* ------Grid------ */
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -35,6 +35,7 @@ body {
 h1, h2, h3, h4, h5{
   font-weight: unset;
   line-height: 1.6rem;
+  margin: 0.5rem;
 }
 
 button {
