@@ -23,7 +23,6 @@
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 30rem;
 
   display: grid;
   grid-template-rows: 1fr 1fr;

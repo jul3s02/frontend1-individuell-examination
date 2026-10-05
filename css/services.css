@@ -1,0 +1,42 @@
+.for-auto-fill-remove-when-done{
+--text: ;
+--background: ;
+--primary: ;
+--secondary: ;
+--accent: ;
+--primary-hover: ; 
+--secondary-hover: ; 
+--accent-hover: ;      
+--background-hover: ;
+}
+
+
+#servicesSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr;
+    color: var(--background);
+
+}
+
+#servicesSection h3 {
+    width: 100%;
+    font-size: 2rem;
+    grid-column: span 4;
+    text-align: center;
+
+    color: var(--text);
+}
+
+#servicesSection h4 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.serviceBox {
+    background-color: var(--primary);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem;
+
+}
