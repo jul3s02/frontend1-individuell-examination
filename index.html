@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="css/commonstyle.css">
     <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/booking.css">
     <link rel="stylesheet" href="css/footer.css">
-    <!-- ico & script -->
+    <!-- ico -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <script src="script/main.js" defer></script>
+    <!-- script -->
+    <script src="script/clock.js" defer></script>
+    <script src="script/booking.js"></script>
 </head>
 <body>
     <header>
@@ -78,7 +81,38 @@
             </section>
         </section>
         <section class="mainSection" id="bookingSection">
+            <section id="bookNow">
+                <form id="bookingForm" action="">
+                    <label for="customerName">Ditt namn</label>
+                    <input required type="text" name="customerName" id="customerName">
+                    
+                    <label for="dogName">Hundens namn</label>
+                    <input required type="text" name="dogName" id="dogName">
 
+                    <label for="phone">Ditt telefonnummer</label>
+                    <input required type="text" name="phone" id="phone">
+
+                    <label for="service">Vad vill du boka?</label>
+                    <select name="service" id="service">
+                        <option value="" disabled selected hidden>Välj vilken tjänst do vill boka här</option>
+                        <option value="service1">Per timme</option>
+                        <option value="service2">Halvdag</option>
+                        <option value="service3">Heldag</option>
+                        <option value="service4">Vecka</option>
+                    </select>
+                    <button type="submit">Boka</button>
+                </form>
+            </section>
+            <section id="viewBooked">
+                <ul id="bookingList">
+                    <!-- remove later -->
+                     <li>heejdeadaowdkwoakd</li>
+                     <li>heejdeadaowdkwoakd</li>
+                     <li>heejdeadaowdkwoakd</li>
+                     <li>heejdeadaowdkwoakd</li>
+                     <li>heejdeadaowdkwoakd</li>
+                </ul>
+            </section>
         </section>
         <section class="mainSection" id="reviewSection">
 

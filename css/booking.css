@@ -1,0 +1,51 @@
+.for-auto-fill-remove-when-done{
+--text: ;
+--background: ;
+--primary: ;
+--secondary: ;
+--accent: ;
+--primary-hover: ; 
+--secondary-hover: ; 
+--accent-hover: ;      
+--background-hover: ;
+}
+
+#bookingSection {
+
+    /* ------------- */
+    min-height: 50vh;
+
+    /* ----------- */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+#bookingSection form {
+    display: contents;
+}
+
+#bookNow {
+    border: black 2px solid;
+    background-color: var(--secondary);
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+#viewBooked {
+    border: black 2px solid;
+    background-color: var(--secondary);
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+#bookingList li {
+    background-color: aquamarine;
+    margin: 1rem;
+    height: 5rem;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+}
