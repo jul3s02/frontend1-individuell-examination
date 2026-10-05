@@ -61,7 +61,7 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
-  background-color: var(--accent-opacity);
+  background-color: var(--accent);
   border-radius: 2rem;
   margin: 1rem;
   padding: 1rem;
@@ -70,6 +70,8 @@
   margin: auto;
   /* horizontal, vertical, blur, color  */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  color: var(--background);
+  opacity: 0.85;
 }
 
 .openHours h3 {
