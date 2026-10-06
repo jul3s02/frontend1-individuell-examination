@@ -1,5 +1,5 @@
-<!-- notes fix h hiriarky kör h1 i header h2 på main intro header o sen h3s -->
 <!DOCTYPE html>
+<!-- notes fix h hiriarky kör h1 i header h2 på main intro header o sen h3s -->
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <!-- script -->
     <script src="script/clock.js" defer></script>
-    <script src="script/booking.js"></script>
+    <script src="script/booking.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,6 +25,7 @@
             <a href="#servicesSection">Tjänster</a>
             <a href="#bookingSection">Boka nu</a>
             <a href="#reviewSection">Recensioner</a>
+        </nav>
     </header>
     <main>
         <section class="mainSection" id="introSection">
@@ -68,7 +69,7 @@
             <section class="serviceBox" id="serviceWeekend">
                 <section class="serviceTopBox">
                     <h4 class="serviceName">Heldag</h4>
-                    <h4 class="price">300kr</ph4>
+                    <h4 class="price">300kr</h4>
                 </section>
                 <p class="serviceDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vel hic error blanditiis consequatur dolorem omnis minus ipsa magnam quaerat sapiente consectetur, nulla harum optio voluptas ut doloremque, neque eligendi!</p>
             </section>
@@ -83,36 +84,50 @@
         <section class="mainSection" id="bookingSection">
             <section id="bookNow">
                 <form id="bookingForm" action="">
-                    <label for="customerName">Ditt namn</label>
-                    <input required type="text" name="customerName" id="customerName">
-                    
-                    <label for="dogName">Hundens namn</label>
-                    <input required type="text" name="dogName" id="dogName">
 
-                    <label for="phone">Ditt telefonnummer</label>
-                    <input required type="text" name="phone" id="phone">
+                    <div>
+                        <label for="customerName">Ditt namn:</label>
+                        <input required type="text" name="customerName" id="customerName">
+                    </div>
+                    <div>
+                        <label for="dogName">Hundens namn:</label>
+                        <input required type="text" name="dogName" id="dogName">
+                    </div>
 
-                    <label for="service">Vad vill du boka?</label>
-                    <select name="service" id="service">
-                        <option value="" disabled selected hidden>Välj vilken tjänst do vill boka här</option>
-                        <option value="service1">Per timme</option>
-                        <option value="service2">Halvdag</option>
-                        <option value="service3">Heldag</option>
-                        <option value="service4">Vecka</option>
-                    </select>
-                    <button type="submit">Boka</button>
+                    <div>
+                        <label for="service">Vad vill du boka?</label>
+                        <select name="service" id="service">
+                            <option value="" disabled selected hidden>Välj vilken tjänst do vill boka här</option>
+                            <option value="service1">Per timme</option>
+                            <option value="service2">Halvdag</option>
+                            <option value="service3">Heldag</option>
+                            <option value="service4">Vecka</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="bookDate">Datum:</label>
+                        <input type="date" name="bookDate" id="bookDate">
+                    </div>
+                    <div>
+                        <button type="submit">Boka</button>
+                        <P>(bokningen sparas bara lokalt, kontakta oss för slutgiltig bokning)</P>
+                    </div>
                 </form>
             </section>
-            <section id="viewBooked">
+            <section id="viewBooked" class="viewBookedCommon hideNoBook">
+                <div id="listSorting" class="listCommon">
+                    <button id="customName" class="sortingButton">Kund</button>
+                    <button id="dogName" class="sortingButton">Hund</button>
+                    <button id="service" class="sortingButton">Tjänst</button>
+                    <button id="bookDate" class="sortingButton">Datum</button>
+                </div>
                 <ul id="bookingList">
-                    <!-- remove later -->
-                     <li>heejdeadaowdkwoakd</li>
-                     <li>heejdeadaowdkwoakd</li>
-                     <li>heejdeadaowdkwoakd</li>
-                     <li>heejdeadaowdkwoakd</li>
-                     <li>heejdeadaowdkwoakd</li>
+
                 </ul>
+                
+                
             </section>
+            <div id="noBookingId" class="noBookings viewBookedCommon">Det finns inga bokningar att visa än</div>
         </section>
         <section class="mainSection" id="reviewSection">
 
