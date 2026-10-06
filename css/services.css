@@ -20,7 +20,6 @@
 }
 
 #servicesSection h3 {
-    width: 100%;
     font-size: 2rem;
     grid-column: span 4;
     text-align: center;
