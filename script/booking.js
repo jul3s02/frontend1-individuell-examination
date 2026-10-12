@@ -9,16 +9,34 @@ let allBookings = []
 let oldSort = ""
 let order = true
 
+//Local storage connection
+
+function saveToStorage(key, object) {
+    const JSONObject = JSON.stringify(object)
+    localStorage.setItem(key, JSONObject)
+}
+
+function getFromStorage(key) {
+    const JSONObject = localStorage.getItem(key)
+    bookFromStorage = JSON.parse(JSONObject)
+    if (bookFromStorage){
+        loopBooking(bookFromStorage)
+    }
+}
 
 //classes
 
 class Booking {
-    constructor(customName, dogName, service, bookDate) {
+    constructor(customName, dogName, service, bookDate, id) {
         this.customName = customName
         this.dogName = dogName
         this.service = service
         this.bookDate = bookDate
-        this.id = Date.now()
+        if(id) {
+            this.id = id
+        }else {
+            this.id = Date.now()
+        }
     }    
 
     createLi() {
@@ -43,7 +61,6 @@ class Booking {
     }
 }
 
-
 //functions
 
 function loop() {
@@ -56,6 +73,7 @@ function loop() {
 
 function deleteBooking(deleteId) {
     allBookings = allBookings.filter(Booking => Booking.id !== deleteId)
+    saveToStorage("booking", allBookings)
     loop()
 }
 
@@ -91,10 +109,20 @@ function noBook(){
     }
 }
 
-//event listener
+function loopBooking(bookFromStorage){
+    bookFromStorage.forEach(booking => {
+    const customerName = booking.customName
+    const dogName = booking.dogName
+    const service = booking.service
+    const bookDate = booking.bookDate
+    const id = booking.id
 
-bookingForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    const newBooking = new Booking(customerName, dogName, service, bookDate, id)
+    allBookings.push(newBooking)
+    })
+}
+
+function addBooking() {
     const customerName = document.getElementById("customerName").value.trim()
     const dogName = document.getElementById("dogName").value.trim()
     const service = document.getElementById("service").value
@@ -106,9 +134,17 @@ bookingForm.addEventListener("submit", (e) => {
     } else {
     const newBooking = new Booking(customerName, dogName, service, bookDate)
     allBookings.push(newBooking)
-    loop()
+    saveToStorage("booking", allBookings)
     }
+}
 
+//event listener
+
+bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    addBooking()
+    saveToStorage("booking", allBookings)
+    loop()
 })
 
 
@@ -128,6 +164,10 @@ listSort.addEventListener("click", (e) => {
     sortIndi(e.target)
 
     loop()
-
 })
 
+// run when bootup
+getFromStorage("booking")
+loop()
+
+console.log(allBookings)
