@@ -9,21 +9,6 @@
     }
 }
 
- .for-auto-fill-remove-when-done{
-    --text: rgb(42, 45, 42);
-    --background: rgb(248, 246, 240);
-    --primary: rgb(74, 107, 58);
-    --secondary: rgb(172, 191, 160) rgb(200, 154, 99);
-    --accent: rgb(122, 91, 67);
-
-    --accent-opacity: rgba(122, 91, 67, 0.8); 
-    
-    --primary-hover: rgb(58, 85, 45);     
-    --secondary-hover: rgb(151, 168, 141) rgb(178, 133, 78); 
-    --accent-hover: rgb(98, 72, 52);      
-    --background-hover: rgb(238, 234, 224);
-} 
-
 #reviewSection {
     min-height: 10vh;
     padding:2rem;
@@ -52,7 +37,6 @@
     padding: 2rem;
     text-align: center;
     border-radius: 2rem;
-
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -84,5 +68,3 @@
     background-color: var(--accent-hover);
     color: var(--background-hover);
 }
-
-

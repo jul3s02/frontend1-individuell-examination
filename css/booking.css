@@ -1,17 +1,4 @@
-/* .for-auto-fill-remove-when-done{
---text: ;
---background: ;
---primary: ;
---secondary: ;
---accent: ;
---primary-hover: ; 
---secondary-hover: ; 
---accent-hover: ;      
---background-hover: ;
-} */
-
 #bookingSection {
-
     /* ------------- */
     min-height: 50vh;
 
@@ -68,8 +55,6 @@
     background-color: var(--accent-hover);
 }
 
-
-
 /* -------------------- */
 
 .viewBookedCommon {
@@ -97,7 +82,6 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     font-size: 1.2rem;
     display: contents;
-
 }
 
 .listCommon {
@@ -130,10 +114,7 @@
 #bookingList button{
     height: 100%;
     border-radius: 1rem;
-
 }
-
-
 
 .active-sort {
     background-color: var(--accent-hover);

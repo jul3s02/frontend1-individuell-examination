@@ -28,6 +28,7 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     margin: 0;
+    width: 100%;
   /* ------Style------ */
     font-family: system-ui, -apple-system, sans-serif;
     background-color: var(--primary);
@@ -103,6 +104,3 @@ header nav a {
 header nav a:hover {
 background-color: var(--primary-hover);
 }
-
-
-
