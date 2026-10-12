@@ -1,15 +1,17 @@
-/* .for-auto-fill-remove-when-done{
---text: ;
---background: ;
---primary: ;
---secondary: ;
---accent: ;
---accent-opacity: ;
---primary-hover: ; 
---secondary-hover: ; 
---accent-hover: ;      
---background-hover: ;
-} */
+ .for-auto-fill-remove-when-done{
+--text: rgb(42, 45, 42);
+    --background: rgb(248, 246, 240);
+    --primary: rgb(74, 107, 58);
+    --secondary: rgb(172, 191, 160) rgb(200, 154, 99);
+    --accent: rgb(122, 91, 67);
+
+    --accent-opacity: rgba(122, 91, 67, 0.8); 
+    
+    --primary-hover: rgb(58, 85, 45);     
+    --secondary-hover: rgb(151, 168, 141) rgb(178, 133, 78); 
+    --accent-hover: rgb(98, 72, 52);      
+    --background-hover: rgb(238, 234, 224);
+} 
 
 
 #introSection {
@@ -133,3 +135,19 @@
 .statusClosed {
     background-color: rgba(171, 33, 33, 0.9);
 }
+
+
+.introText {
+  grid-row: 2;
+  grid-column: 1;
+
+  margin: 3rem;
+  margin-top: 1rem; 
+  margin-right: 6rem;  
+
+  color: var(--background);
+  font-size: 1.5rem;
+  text-shadow: 4px 4px 5px var(--text);
+  text-align: center;
+}
+
