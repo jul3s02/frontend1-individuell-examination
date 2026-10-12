@@ -49,10 +49,14 @@ class Booking {
             <p>${this.dogName}</p>
             <p>${this.service}</p>
             <p>${this.bookDate}</p>
-            <button class="deleteListing">delete</button>
             `;
+        
+        const deleteBtn = document.createElement("img")
+        deleteBtn.src = "images/bin.png"
+        deleteBtn.classList.add("deleteBtn")
+        li.appendChild(deleteBtn)
 
-        const deleteListing = li.querySelector(".deleteListing")
+        const deleteListing = li.querySelector(".deleteBtn")
         deleteListing.addEventListener("click", () => {
             deleteBooking(this.id) 
         })

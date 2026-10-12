@@ -1,7 +1,5 @@
 #servicesSection {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr;
+
     color: var(--background);
 
 }
@@ -50,4 +48,18 @@
     grid-column: span 2;
     grid-row: 2;
     margin: 0;
+}
+
+.serviceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+@media (max-width: 480px) {
+    .serviceContainer{
+        flex-direction: column;
+    }
+
 }

@@ -68,3 +68,41 @@
     background-color: var(--accent-hover);
     color: var(--background-hover);
 }
+
+@media (max-width: 480px) {
+    #reviewSection {
+        padding: 1rem 0.5rem;
+    }
+
+    #reviewSection h3 {
+        font-size: 1.6rem;
+        padding: 0.6rem 1rem;
+        margin: 0.5rem;
+        text-align: center;
+    }
+
+    .review {
+        width: 90vw; /* Gör att recensionsrutan fyller ut skärmen bättre utan att krocka i kanterna */
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+    }
+
+    .reviewText {
+        font-size: 1.1rem; /* Skalar ner brödtexten så den blir läsbar */
+        margin: 1rem 0;
+    }
+
+    .reviewBy {
+        font-size: 0.95rem;
+    }
+
+    .gradeStar {
+        width: 1.5rem; /* Gör stjärnorna lite mindre så de inte tar över rutan */
+    }
+
+    #switchReview {
+        font-size: 0.95rem;
+        padding: 0.7rem 1rem;
+        margin: 0.5rem;
+    }
+}
