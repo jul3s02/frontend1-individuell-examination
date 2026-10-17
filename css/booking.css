@@ -1,7 +1,6 @@
 #bookingSection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
 }
 
 #bookingSection form {
@@ -28,8 +27,6 @@
 }
 
 #bookNow label {
-    display: block;
-    width:100%;
     font-size: 1.5rem;
 }
 
@@ -46,10 +43,9 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     box-sizing: border-box;
-    
     margin-top: 2rem;
     margin-bottom: 1rem;
-
+    color: var(--background);
 }
 
 #bookNow button:hover {
@@ -79,19 +75,16 @@
 
 #bookingList {
     padding: 0;
-    height: auto;
 }
 
 .listBookings {
     background-color: var(--accent);
     color: var(--background);
     margin: 1rem;
-    
     border-radius: 1rem;
     min-height: 5rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     font-size: 1.2rem;
-    display: contents;
 }
 
 .listCommon {
@@ -144,19 +137,19 @@
     display: none;
 }
 
-.deleteBtn {
+.deleteBtn img{
     width: 1.5rem;
     transition: ease 300ms;
 }
 
-.deleteBtn:hover {
+.deleteBtn:hover img{
     transform: scale(1.5 );
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1025px) {
     #bookingSection {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        padding: 4rem;
     }
 
     .viewBookedCommon {
@@ -175,11 +168,6 @@
         padding: 0.5rem;
     }
 
-    #bookNow{
-        padding: 1rem;
-    }
-
-    /* 1. Gör om sorteringsknapparna till 2x2 på mobil så de blir enkla att klicka på */
     #listSorting {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -195,11 +183,10 @@
         text-align: center;
     }
 
-    /* 2. Anpassa bokningsraderna för små skärmar */
     .listCommon {
         display: grid;
-        grid-template-columns: 1.2fr 1.2fr 1fr 1fr 0.6fr; /* Justerade proportioner */
-        font-size: 0.75rem; /* Lite mindre text */
+        grid-template-columns: 1.2fr 1.2fr 1fr 1fr 0.6fr; 
+        font-size: 0.75rem;
         gap: 0.2rem;
         padding: 0.4rem 0.2rem;
         text-align: center;
@@ -212,12 +199,11 @@
         min-height: 3.5rem;
     }
 
-    .deleteBtn {
-        width: 1.1rem; /* Passande storlek för touch */
+    .deleteBtn img{
+        width: 1.1rem; 
         justify-self: center;
     }
 
-    /* 3. Justera bokningsformuläret för små skärmar */
     #bookNow {
         padding: 1rem;
         margin: 0.5rem;
@@ -226,23 +212,29 @@
     }
 
     #bookNow label {
-        font-size: 1.1rem; /* Gör etiketterna lite smidigare */
+        font-size: 1.1rem; 
     }
 
     #bookNow input, 
     #bookNow select {
-        font-size: 1rem; /* Anpassar texten i fälten */
+        font-size: 1rem;
         padding: 0.4rem;
     }
 
     #bookNow button {
-        font-size: 1.4rem; /* Skalar ner knappen från 2.2rem så den inte spränger mobilen */
+        font-size: 1.4rem; 
         padding: 0.8rem;
         margin-top: 1rem;
         margin-bottom: 0.5rem;
     }
     
     #bookNow p {
-        font-size: 0.8rem; /* Lite mindre text på villkorstexten */
+        font-size: 0.8rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    #bookingSection {
+        padding: 0;
     }
 }

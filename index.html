@@ -42,12 +42,12 @@
             </p>
             <section class="openHours">
                 <h3>Öppetider:</h3>
-                <p class="openDay">Mån-Fre</p> <p class="">07:00 - 18:00</p>
-                <p class="openDay">Lördag</p> <p class="">09:00 - 14:00</p>
-                <p class="openDay">Söndag</p> <p class="">Stängt</p>
+                <p class="openDay">Mån-Fre</p> <p>07:00 - 18:00</p>
+                <p class="openDay">Lördag</p> <p>09:00 - 14:00</p>
+                <p class="openDay">Söndag</p> <p>Stängt</p>
             </section>
             <section id="openStatusContainer">
-                <div class="statusError" id="">
+                <div class="statusError">
                     <p class="openStatustext" id="openStatus">Error</p>
                     <p class="openStatustext" id="timeStatus">Error</p>
                     <p class="openStatustext" id="dateStatus">Error</p>
@@ -62,7 +62,7 @@
                 <section class="serviceBox" id="serviceDay">
                     <section class="serviceTopBox">
                         <h4 class="serviceName">Heldag</h4>
-                        <h4 class="price">320kr</h4>
+                        <p class="price">320kr</p>
                     </section>
                     <p class="serviceDescription">Heldag med bus, promenader och vila för aktiva hundar.</p>
                 </section>
@@ -76,14 +76,14 @@
                 <section class="serviceBox" id="serviceEvening">
                     <section class="serviceTopBox">
                         <h4 class="serviceName">Eftermiddag</h4>
-                        <h4 class="price">190kr</h4>
+                        <p class="price">190kr</p>
                     </section>
                     <p class="serviceDescription">Passning från lunch fram till stängning (12:00–18:00).</p>
                 </section>
                 <section class="serviceBox" id="serviceNight">
                     <section class="serviceTopBox">
                         <h4 class="serviceName">Natt</h4>
-                        <h4 class="price">450kr</h4>
+                        <p class="price">450kr</p>
                     </section>
                     <p class="serviceDescription">Övernattning med egen mysig plats, omvårdnad och kvällspromenad.</p>
                 </section>
@@ -94,17 +94,17 @@
                 <form id="bookingForm" action="">
 
                     <div>
-                        <label for="customerName">Ditt namn:</label>
-                        <input required type="text" name="customerName" id="customerName">
+                        <label for="inputCustomerName">Ditt namn:</label>
+                        <input required type="text" name="inputCustomerName" id="inputCustomerName">
                     </div>
                     <div>
-                        <label for="dogName">Hundens namn:</label>
-                        <input required type="text" name="dogName" id="dogName">
+                        <label for="inputDogName">Hundens namn:</label>
+                        <input required type="text" name="inputDogName" id="inputDogName">
                     </div>
 
                     <div>
-                        <label for="service">Vad vill du boka?</label>
-                        <select name="service" id="service">
+                        <label for="inputService">Vad vill du boka?</label>
+                        <select required name="inputService" id="inputService">
                             <option value="" disabled selected hidden>Välj vilken tjänst du vill boka här</option>
                             <option value="serviceDay">Heldag</option>
                             <option value="serviceMorning">Förmiddag</option>
@@ -113,8 +113,8 @@
                         </select>
                     </div>
                     <div>
-                        <label for="bookDate">Datum:</label>
-                        <input type="date" name="bookDate" id="bookDate">
+                        <label for="inputBookDate">Datum:</label>
+                        <input required type="date" name="inputBookDate" id="inputBookDate">
                     </div>
                     <div>
                         <button type="submit">Boka</button>
@@ -163,11 +163,11 @@
                 </li>
                 <li>
                     <p>E-mail:</p>
-                    <a target="_blank" href="mailto:hej@tassen.se">hej@tassen.se</a>
+                    <a target="_blank" rel="noreferrer" href="mailto:hej@tassen.se">hej@tassen.se</a>
                 </li>
                 <li>
                     <p>Adress:</p>
-                    <a target="_blank" rel="noreferrer" href=" https://www.google.com/maps/search/?api=1&query=Tassen+hundpensionat">Hagvägen 4</a>
+                    <a target="_blank" rel="noreferrer" href=" https://www.google.com/maps/search/?api=1&query=Tassen+hundpensionat+Hagvägen+4">Hagvägen 4</a>
                 </li>
             </ul>      
         </section>

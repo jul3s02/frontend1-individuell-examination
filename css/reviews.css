@@ -1,7 +1,7 @@
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px); /* Flyttar upp den lite lätt samtidigt */
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -10,7 +10,6 @@
 }
 
 #reviewSection {
-    min-height: 10vh;
     padding:2rem;
     display: flex;
     flex-direction: column;
@@ -26,7 +25,6 @@
     width: fit-content;
     padding: 1rem;
     border-radius: 1rem;
-
     display: flex;
     align-items: center;
 }
@@ -78,17 +76,16 @@
         font-size: 1.6rem;
         padding: 0.6rem 1rem;
         margin: 0.5rem;
-        text-align: center;
     }
 
     .review {
-        width: 90vw; /* Gör att recensionsrutan fyller ut skärmen bättre utan att krocka i kanterna */
+        width: 90vw; 
         padding: 1.2rem;
         border-radius: 1.2rem;
     }
 
     .reviewText {
-        font-size: 1.1rem; /* Skalar ner brödtexten så den blir läsbar */
+        font-size: 1.1rem; 
         margin: 1rem 0;
     }
 
@@ -97,7 +94,7 @@
     }
 
     .gradeStar {
-        width: 1.5rem; /* Gör stjärnorna lite mindre så de inte tar över rutan */
+        width: 1.5rem; 
     }
 
     #switchReview {

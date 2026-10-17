@@ -1,4 +1,4 @@
-// ----- defing var
+// ----- defing vars
 const bookingForm = document.getElementById("bookingForm")
 const bookingList = document.getElementById("bookingList")
 const listSort = document.getElementById("listSorting")
@@ -67,9 +67,14 @@ class Booking {
 
         li.append(customer, dog, service, date)
 
-        const deleteBtn = document.createElement("img")
-        deleteBtn.src = "images/bin.png"
+        const deleteImg = document.createElement("img")
+        deleteImg.src = "images/bin.png"
+        deleteImg.alt = "Ta bort boknig"
+
+        const deleteBtn = document.createElement("button")        
         deleteBtn.classList.add("deleteBtn")
+        deleteBtn.appendChild(deleteImg)
+
         li.appendChild(deleteBtn)
 
         const deleteListing = li.querySelector(".deleteBtn")
@@ -85,8 +90,8 @@ class Booking {
 
 function loop() {
     bookingList.innerHTML = ""
-    allBookings.forEach(element => {
-        bookingList.appendChild(element.createLi())
+    allBookings.forEach(e => {
+        bookingList.appendChild(e.createLi())
     });
     noBook()
 }
@@ -143,14 +148,13 @@ function loopBooking(bookFromStorage){
 }
 
 function addBooking() {
-    const customerName = document.getElementById("customerName").value.trim()
-    const dogName = document.getElementById("dogName").value.trim()
-    const service = document.getElementById("service").value
-    const bookDate = document.getElementById("bookDate").value
+    const customerName = document.getElementById("inputCustomerName").value.trim()
+    const dogName = document.getElementById("inputDogName").value.trim()
+    const service = document.getElementById("inputService").value
+    const bookDate = document.getElementById("inputBookDate").value
 
     if (!customerName || !dogName || !service || !bookDate) {
         alert("Vänligen fyll i alla fält")
-        //fix error to html
     } else {
     const newBooking = new Booking(customerName, dogName, service, bookDate)
     allBookings.push(newBooking)

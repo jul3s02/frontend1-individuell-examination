@@ -8,7 +8,7 @@ const reviews = [
     },
     {
         id: 1,
-        grade: 3,
+        grade: 4,
         reviewBy: "Marcus",
         reviewText: "Professionell och trygg personal. Det stora inhägnade utomhusområdet är guld värt för energiska hundar."
     },
@@ -26,7 +26,7 @@ const reviews = [
     },
     {
         id: 4,
-        grade: 2,
+        grade: 5,
         reviewBy: "Hanna",
         reviewText: "Väldigt trevligt bemötande och hunden somnar alltid gott direkt när vi kommer hem."
     }
