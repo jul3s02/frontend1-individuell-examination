@@ -43,14 +43,30 @@ class Booking {
         const li =document.createElement("li")
         li.id = this.id
         li.className = "listBookings listCommon"
-        li.innerHTML =
-            `
-            <p>${this.customName}</p>
-            <p>${this.dogName}</p>
-            <p>${this.service}</p>
-            <p>${this.bookDate}</p>
-            `;
         
+        const customer = document.createElement("p")
+        const dog = document.createElement("p")
+        const service = document.createElement("p")
+        const date = document.createElement("p")
+
+        customer.textContent = this.customName
+        dog.textContent = this.dogName
+        date.textContent = this.bookDate
+        
+        if (this.service === "serviceDay") {
+            service.textContent = "Heldag"
+        }else if (this.service === "serviceMorning") {
+            service.textContent = "Förmiddag"
+        }else if (this.service === "serviceEvening") {
+            service.textContent = "Eftermiddag"
+        } else if (this.service === "serviceNight") {
+            service.textContent = "Natt"
+        }else {
+            service.textContent = "Error failed to load"
+        }
+
+        li.append(customer, dog, service, date)
+
         const deleteBtn = document.createElement("img")
         deleteBtn.src = "images/bin.png"
         deleteBtn.classList.add("deleteBtn")
@@ -133,7 +149,7 @@ function addBooking() {
     const bookDate = document.getElementById("bookDate").value
 
     if (!customerName || !dogName || !service || !bookDate) {
-        console.log("nej de fel, den ska inte va fel")
+        alert("Vänligen fyll i alla fält")
         //fix error to html
     } else {
     const newBooking = new Booking(customerName, dogName, service, bookDate)
@@ -147,6 +163,7 @@ function addBooking() {
 bookingForm.addEventListener("submit", (e) => {
     e.preventDefault();
     addBooking()
+    bookingForm.reset()
     saveToStorage("booking", allBookings)
     loop()
 })

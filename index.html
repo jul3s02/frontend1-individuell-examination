@@ -58,33 +58,34 @@
             <!-- Tjänster   1: havldag, 2: heldag, 3: helg, 4: vecka -->
              <h3>Våra Tjänster</h3>
             <section class="serviceContainer">
-                <section class="serviceBox" id="serviceHalf">
-                    <section class="serviceTopBox">
-                        <h4 class="serviceName">Timpris</h4>
-                        <p class="price">300kr</p>
-                    </section>
-                    <p class="serviceDescription"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quaerat laborum vitae eaque nihil ab. Sapiente illum libero nihil nesciunt ipsam exercitationem, rerum maxime, sit ad explicabo enim dolores suscipit.</p>
-                </section>
-                <section class="serviceBox" id="serviceWhole">
-                    <section class="serviceTopBox">
-                        <h4 class="serviceName">Halvdag</h4>
-                        <h4 class="price">300kr</h4>
-                    </section>
-                    <p class="serviceDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error officia quis temporibus animi eos enim, neque ab debitis, incidunt unde, totam suscipit eligendi ad laborum recusandae veritatis deleniti possimus dolores?</p>
-                </section>
-                <section class="serviceBox" id="serviceWeekend">
+                
+                <section class="serviceBox" id="serviceDay">
                     <section class="serviceTopBox">
                         <h4 class="serviceName">Heldag</h4>
-                        <h4 class="price">300kr</h4>
+                        <h4 class="price">320kr</h4>
                     </section>
-                    <p class="serviceDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vel hic error blanditiis consequatur dolorem omnis minus ipsa magnam quaerat sapiente consectetur, nulla harum optio voluptas ut doloremque, neque eligendi!</p>
+                    <p class="serviceDescription">Heldag med bus, promenader och vila för aktiva hundar.</p>
                 </section>
-                <section class="serviceBox" id="serviceWeek">
+                <section class="serviceBox" id="serviceMorning">
                     <section class="serviceTopBox">
-                        <h4 class="serviceName">Vecka</h4>
-                        <h4 class="price">300kr</h4>
+                        <h4 class="serviceName">Förmiddag</h4>
+                        <p class="price">190kr</p>
+                    </section>  
+                    <p class="serviceDescription">Passning under morgonen och förmiddagen (07:00–12:00).</p>
+                </section>
+                <section class="serviceBox" id="serviceEvening">
+                    <section class="serviceTopBox">
+                        <h4 class="serviceName">Eftermiddag</h4>
+                        <h4 class="price">190kr</h4>
                     </section>
-                    <p class="serviceDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione distinctio fugit reprehenderit corporis esse repellendus numquam voluptatibus neque, sunt architecto. Earum nobis amet ex explicabo maiores, facere similique a.</p>
+                    <p class="serviceDescription">Passning under morgonen och förmiddagen (07:00–12:00).</p>
+                </section>
+                <section class="serviceBox" id="serviceNight">
+                    <section class="serviceTopBox">
+                        <h4 class="serviceName">Natt</h4>
+                        <h4 class="price">450kr</h4>
+                    </section>
+                    <p class="serviceDescription">Övernattning med egen mysig plats, omvårdnad och kvällspromenad.</p>
                 </section>
             </section>
         </section>
@@ -105,10 +106,10 @@
                         <label for="service">Vad vill du boka?</label>
                         <select name="service" id="service">
                             <option value="" disabled selected hidden>Välj vilken tjänst do vill boka här</option>
-                            <option value="service1">Per timme</option>
-                            <option value="service2">Halvdag</option>
-                            <option value="service3">Heldag</option>
-                            <option value="service4">Vecka</option>
+                            <option value="serviceDay">Heldag</option>
+                            <option value="serviceMorning">Förmiddag</option>
+                            <option value="serviceEvening">Eftermiddag</option>
+                            <option value="serviceNight">Natt</option>
                         </select>
                     </div>
                     <div>
