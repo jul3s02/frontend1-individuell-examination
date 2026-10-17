@@ -190,5 +190,3 @@ listSort.addEventListener("click", (e) => {
 // run when bootup
 getFromStorage("booking")
 loop()
-
-console.log(allBookings)
