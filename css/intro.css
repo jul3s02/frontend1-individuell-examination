@@ -3,7 +3,7 @@
   --h1offset: 1.5rem;
 
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0) 75%, #F8F6F0 100%),
+    linear-gradient(rgba(0, 0, 0, 0) 75%, var(--background) 100%),
     url(../images/hundpensionat5.jpg);
   background-size:cover;
   background-repeat: no-repeat;

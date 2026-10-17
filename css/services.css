@@ -1,7 +1,8 @@
 #servicesSection {
-
     color: var(--background);
-
+    /* Fix for wierd bug in chromium browsers */
+    background-color: var(--background);
+    margin-top: -1px;
 }
 
 #servicesSection h3 {
